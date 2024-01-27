@@ -1,0 +1,12 @@
+<div
+  class="grid grid-cols-4 gap-4 p-3"
+  infinite-scroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="1000"
+  [scrollWindow]="true"
+  (scrolled)="onModalScrollDown()"
+>
+  <div *ngFor="let gif of gifs">
+    <app-gif-card [gif]="gif"></app-gif-card>
+  </div>
+</div>
