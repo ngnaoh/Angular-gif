@@ -1,7 +1,10 @@
 <div
   class="max-w-sm bg-white border border-gray-200 rounded-lg shadow h-min dark:bg-gray-800 dark:border-gray-700 relative"
+  (mouseover)="hover()"
+  (mouseleave)="leave()"
 >
   <div
+    *ngIf="onHover"
     class="absolute top-0 right-0 hover:bg-white/10 p-2 rounded-sm"
     (click)="copyToClipboard()"
   >
